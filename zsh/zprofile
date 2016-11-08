@@ -1,2 +1,11 @@
 echo "zprofile"
 
+### Keyboard bindings
+# emacs key mode, change to `-v` if you prefer that instead.
+bindkey -e
+
+# Delete, home, end
+bindkey "\e[3~" delete-char
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
