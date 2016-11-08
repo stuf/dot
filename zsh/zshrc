@@ -4,7 +4,9 @@
 export DOTFILES_DIR=$HOME/.dot
 export EDITOR=vim
 
-. ./aliases.sh
+pushd "$DOTFILES_DIR" > /dev/null
+. zsh/aliases.sh
+popd > /dev/null
 
 ### Keyboard bindings
 # emacs key mode, change to `-v` if you prefer that instead.
