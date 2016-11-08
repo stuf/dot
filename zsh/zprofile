@@ -20,7 +20,7 @@ export NVM_DIR="/Users/stuf/.nvm"
 echo "Done."
 
 ### Load rbenv
-echo -n "Loading \`rbenv\`..."
+echo -n "Loading \`rbenv\`... "
 eval "$(rbenv init -)"
 echo "Done."
 
