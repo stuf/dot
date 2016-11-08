@@ -1,4 +1,8 @@
-echo "zprofile"
+. "${HOME}/.dot/zsh/utils.sh"
+
+put_heading "Load profile"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 ### Keyboard bindings
 # emacs key mode, change to `-v` if you prefer that instead.
@@ -8,4 +12,15 @@ bindkey -e
 bindkey "\e[3~" delete-char
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
+
+### Load the node version manager
+echo -n "Loading \`nvm\`... "
+export NVM_DIR="/Users/stuf/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+echo "Done."
+
+### Load rbenv
+echo -n "Loading \`rbenv\`..."
+eval "$(rbenv init -)"
+echo "Done."
 
