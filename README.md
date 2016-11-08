@@ -9,7 +9,7 @@ So instead of fixing the problem, I decided to wipe out and start off of a clean
 
 I will probably end up repeating a lot of mistakes solved by a lot of dotfile repos, but this will be good practice in organizing my shell environment and how things are put together.
 
-So if you end up using these, that's awesome! If you find some stupidity, [open an issue](issues/) or [ping me on Twitter](https://twitter.com/piparkaq).
+So if you end up using these, that's awesome! If you find some stupidity, [open an issue](https://github.com/stuf/dot/issues) or [ping me on Twitter](https://twitter.com/piparkaq).
 
 ## Installation
 
