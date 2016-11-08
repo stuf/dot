@@ -6,6 +6,7 @@ export EDITOR=vim
 
 pushd "$DOTFILES_DIR" > /dev/null
 . zsh/aliases.sh
+. zsh/utils.sh
 popd > /dev/null
 
 ### History
@@ -21,22 +22,38 @@ zstyle :compinstall filename '/Users/stuf/.zshrc'
 autoload -Uz compinit
 compinit
 
-### Theming
-# ls colors
-export CLICOLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
-export LSCOLORS=exfxcxdxbxGxDxabagacad
-
 ### OS-specifics
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
+[[ "$OSTYPE" == darwin* ]] && export BROWSER='open'
+[[ -z "$LANG" ]] && export LANG='en_US.UTF-8'
 
 ### Aliases
 alias ls='ls -G'
+
+put_heading "Load profile"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+### Keyboard bindings
+# emacs key mode, change to `-v` if you prefer that instead.
+bindkey -e
+
+# Delete, home, end
+bindkey '\e[3~' delete-char
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+### Load the node version manager
+echo "Loading \`nvm\`... "
+export NVM_DIR="/Users/stuf/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && time (. "$NVM_DIR/nvm.sh")  # This loads nvm
+
+### Load rbenv
+echo "Loading \`rbenv\`... "
+time (eval "$(rbenv init -)")
+
+echo
+
+eval $(gdircolors)
 
 PS1='%F{5}[%F{2}%n%F{3}@%F{2}%m%F{5}] %F{3}%3~ %f%# '
 

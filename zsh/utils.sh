@@ -3,8 +3,6 @@
 HEADING=$(tput smul)
 RESET=$(tput sgr0)
 
-put_heading()
-{
-  echo "${HEADING}${@}${RESET}"
-}
+put_heading() { echo "${HEADING}${@}${RESET}"; }
 
+indent() { sed 's/^/    /'; }

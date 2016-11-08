@@ -16,4 +16,3 @@ So if you end up using these, that's awesome! If you find some stupidity, [open 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/stuf/dot/master/install.sh)"
 ```
-
