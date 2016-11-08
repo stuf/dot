@@ -1,2 +1,5 @@
-echo "zshenv"
+# Delete, home, end
+bindkey "\e[3~" delete-char
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
 
