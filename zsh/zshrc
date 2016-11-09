@@ -3,6 +3,7 @@
 
 export DOTFILES_DIR=$HOME/.dot
 export EDITOR=vim
+export HOMEBREW_CASK_OPTS=--caskroom=/opt/homebrew-cask/Caskroom
 
 pushd "$DOTFILES_DIR" > /dev/null
 . zsh/aliases.sh
@@ -45,7 +46,7 @@ bindkey '^[[F' end-of-line
 ### Load the node version manager
 echo "Loading \`nvm\`... "
 export NVM_DIR="/Users/stuf/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && time (. "$NVM_DIR/nvm.sh")  # This loads nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && time (. "$NVM_DIR/nvm.sh" --no-use)  # This loads nvm
 
 ### Load rbenv
 echo "Loading \`rbenv\`... "
