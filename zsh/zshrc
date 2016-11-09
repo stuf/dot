@@ -1,11 +1,11 @@
 ### Source `z`
 . $(brew --prefix)/etc/profile.d/z.sh
 
-export DOTFILES_DIR=$HOME/.dot
+export DOTDIR=$HOME/.dot
 export EDITOR=vim
 export HOMEBREW_CASK_OPTS=--caskroom=/opt/homebrew-cask/Caskroom
 
-pushd "$DOTFILES_DIR" > /dev/null
+pushd "$DOTDIR" > /dev/null
 . zsh/aliases.sh
 . zsh/utils.sh
 popd > /dev/null

@@ -21,6 +21,12 @@ if [[ ! -d "$DOTDIR" ]]; then
 
     echo "Homebrew installation done."
   fi
+
+  # Make sure all the submodules are present
+  git submodule update --init --recursive
+  ln -s "$DOTDIR/submodules/Vundle.vim" "$DOTDIR/vim/bundle/Vundle.vim"
+
+  ln -s "$DOTDIR/vim" "$HOME/.vim"
 else
   echo "Already installed"
 fi
