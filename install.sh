@@ -22,7 +22,9 @@ if [[ ! -d "$DOTDIR" ]]; then
     echo "Homebrew installation done."
   fi
 
+  # Vim bundle repos
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 else
   echo "Already installed"
 fi
